@@ -6,3 +6,13 @@
 @custom-variant data-dark (&:where([data-theme=dark], [data-theme=dark] *));
 @custom-variant data-light (&:where([data-theme=light], [data-theme=light] *));
 @custom-variant data-system (&:where([data-theme=system], [data-theme=system] *));
+
+@theme {
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-fira-code);
+}
+
+::selection {
+  background-color: theme('colors.sky.500');
+  color: theme('colors.white');
+}

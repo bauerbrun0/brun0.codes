@@ -1,20 +1,21 @@
 ---
 import Head from "@components/Head.astro";
 import Header from "@components/Header.astro";
+import { getLangFromUrl } from "@i18n/utils.ts";
 
-import "../styles/global.css";
+import "@styles/global.css";
 
 const { title } = Astro.props;
+
+const lang = getLangFromUrl(Astro.url);
 ---
 
-<html lang="en">
+<html lang={lang}>
     <head>
         <Head title={title} />
     </head>
     <body class="dark:bg-[#18181A] dark:text-white">
-        <div
-            class="h-screen w-full md:max-w-3xl mx-auto pt-12 px-4 md:px-8 pb-36"
-        >
+        <div class="h-dvh w-full md:max-w-3xl mx-auto pt-12 px-4 md:px-8 pb-36">
             <Header />
             <slot />
         </div>

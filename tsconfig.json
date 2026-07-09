@@ -20,6 +20,12 @@
       ],
       "@assets/*": [
         "./src/assets/*"
+      ],
+      "@i18n/*": [
+        "./src/utils/i18n/*"
+      ],
+      "@styles/*": [
+        "./src/styles/*"
       ]
     },
     "jsx": "react-jsx",

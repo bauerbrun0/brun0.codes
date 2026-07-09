@@ -2,28 +2,41 @@
 import { ThemeToggle } from "./ThemeToggle.tsx";
 import { AnimatedUnderline } from "./AnimatedUnderline.tsx";
 import ArrowDownRight from "@assets/icons/ArrowDownRight.astro";
+import { LanguageToggle } from "./LanguageToggle.tsx";
+import {
+    getLangFromUrl,
+    useTranslations,
+    useTranslatedPath,
+} from "@i18n/utils.ts";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
 ---
 
 <header class="w-full flex gap-3 md:gap-4 justify-end text-sm sm:text-base">
-    <!-- this and AnimatedUnderline should be Astro components, I just wanted to try React in Astro. -->
+    <!-- these and AnimatedUnderline should be Astro components, I just wanted to try React in Astro. -->
+    <LanguageToggle client:load url={Astro.url} />
     <ThemeToggle client:load />
     <div
-        class="inline-block h-auto w-px self-stretch bg-neutral-300 dark:bg-neutral-600"
+        class="inline-block h-auto w-px self-stretch bg-neutral-300 dark:bg-neutral-600 my-1.5"
     >
     </div>
     <nav>
         <ul class="flex gap-3 md:gap-4">
             <li>
-                <a href="/" class="group">
-                    <AnimatedUnderline client:load>home</AnimatedUnderline>
+                <a href={translatePath("/")} class="group">
+                    <AnimatedUnderline client:load>
+                        {t("header.home")}
+                    </AnimatedUnderline>
                 </a>
             </li>
 
             <li>
-                <a href="/" class="group">
+                <a href="/resume" class="group">
                     <AnimatedUnderline client:load>
                         <div class="flex gap-1 items-center">
-                            <span>resume</span>
+                            <span>{t("header.resume")}</span>
                             <ArrowDownRight classes="w-4 h-4" />
                         </div>
                     </AnimatedUnderline>

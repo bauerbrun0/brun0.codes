@@ -1,2 +1,8 @@
 @import "tailwindcss";
 @plugin '@tailwindcss/typography';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@custom-variant data-dark (&:where([data-theme=dark], [data-theme=dark] *));
+@custom-variant data-light (&:where([data-theme=light], [data-theme=light] *));
+@custom-variant data-system (&:where([data-theme=system], [data-theme=system] *));

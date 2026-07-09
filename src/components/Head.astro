@@ -8,3 +8,29 @@ const { title } = Astro.props;
 <meta name="viewport" content="width=device-width" />
 <meta name="generator" content={Astro.generator} />
 <title>{title}</title>
+<script is:inline>
+    function updateTheme() {
+        const storedTheme = localStorage.theme;
+        const isSystemDark = window.matchMedia(
+            "(prefers-color-scheme: dark)",
+        ).matches;
+
+        if (storedTheme) {
+            document.documentElement.dataset.theme = storedTheme;
+            document.documentElement.classList.toggle(
+                "dark",
+                storedTheme === "dark",
+            );
+            return;
+        }
+
+        document.documentElement.classList.toggle("dark", isSystemDark);
+        document.documentElement.dataset.theme = "system";
+    }
+
+    updateTheme();
+
+    window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", updateTheme);
+</script>

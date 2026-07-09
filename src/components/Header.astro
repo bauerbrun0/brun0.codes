@@ -1,12 +1,29 @@
 ---
 import { ThemeToggle } from "./ThemeToggle.tsx";
+import AnimatedLink from "./AnimatedLink.astro";
+import { AnimatedUnderline } from "./AnimatedUnderline.tsx";
 ---
 
-<header class="w-full flex gap-2 justify-end">
+<header class="w-full flex gap-3 md:gap-4 justify-end text-sm sm:text-base">
+    <!-- this and AnimatedUnderline should be Astro components, I just wanted to try React in Astro. -->
     <ThemeToggle client:load />
+    <div
+        class="inline-block h-auto w-px self-stretch bg-neutral-300 dark:bg-neutral-600"
+    >
+    </div>
     <nav>
-        <ul class="flex gap-2">
-            <li><a href="/">home</a></li>
+        <ul class="flex gap-3 md:gap-4">
+            <li>
+                <a href="/">
+                    <AnimatedUnderline client:load text="home" />
+                </a>
+            </li>
+
+            <li>
+                <a href="/">
+                    <AnimatedUnderline client:load text="resume" />
+                </a>
+            </li>
         </ul>
     </nav>
 </header>

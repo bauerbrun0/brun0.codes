@@ -18,14 +18,14 @@ export function ThemeToggle() {
 
   return (
     <>
-      <button className="hover:cursor-pointer hidden data-system:flex" onClick={toggleTheme}>
-        <AnimatedUnderline text="system" />
+      <button className="hover:cursor-pointer hidden data-system:flex group" onClick={toggleTheme}>
+        <AnimatedUnderline>system</AnimatedUnderline>
       </button>
-      <button className="hover:cursor-pointer hidden data-light:flex" onClick={toggleTheme}>
-        <AnimatedUnderline text="light" />
+      <button className="hover:cursor-pointer hidden data-light:flex group" onClick={toggleTheme}>
+        <AnimatedUnderline>light</AnimatedUnderline>
       </button>
-      <button className="hover:cursor-pointer hidden data-dark:flex" onClick={toggleTheme}>
-        <AnimatedUnderline text="dark" />
+      <button className="hover:cursor-pointer hidden data-dark:flex group" onClick={toggleTheme}>
+        <AnimatedUnderline>dark</AnimatedUnderline>
       </button>
     </>
   );

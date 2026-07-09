@@ -1,7 +1,7 @@
 ---
 import { ThemeToggle } from "./ThemeToggle.tsx";
-import AnimatedLink from "./AnimatedLink.astro";
 import { AnimatedUnderline } from "./AnimatedUnderline.tsx";
+import ArrowDownRight from "@assets/icons/ArrowDownRight.astro";
 ---
 
 <header class="w-full flex gap-3 md:gap-4 justify-end text-sm sm:text-base">
@@ -14,14 +14,19 @@ import { AnimatedUnderline } from "./AnimatedUnderline.tsx";
     <nav>
         <ul class="flex gap-3 md:gap-4">
             <li>
-                <a href="/">
-                    <AnimatedUnderline client:load text="home" />
+                <a href="/" class="group">
+                    <AnimatedUnderline client:load>home</AnimatedUnderline>
                 </a>
             </li>
 
             <li>
-                <a href="/">
-                    <AnimatedUnderline client:load text="resume" />
+                <a href="/" class="group">
+                    <AnimatedUnderline client:load>
+                        <div class="flex gap-1 items-center">
+                            <span>resume</span>
+                            <ArrowDownRight classes="w-4 h-4" />
+                        </div>
+                    </AnimatedUnderline>
                 </a>
             </li>
         </ul>

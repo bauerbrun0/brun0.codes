@@ -2,6 +2,8 @@
 import Layout from "@layouts/Layout.astro";
 import { HeroProfile } from "@components/HeroProfile.tsx";
 import Link from "@components/Link.astro";
+import Technology from "@components/Technology.astro";
+import Technologies from "@components/Technologies.astro";
 ---
 
 <Layout title="brun0.codes">
@@ -26,5 +28,36 @@ import Link from "@components/Link.astro";
                 >itt töltheted le</Link
             >.
         </p>
+    </div>
+    <div class="mt-8 prose-sm md:prose-base text-gray-800 dark:text-gray-200">
+        <h1 class="text-sm md:text-base font-medium">Technológiák</h1>
+        <Technologies
+            name="Frontend"
+            technologies={[
+                "JavaScript",
+                "TypeScript",
+                "Svelte",
+                "SvelteKit",
+                "React",
+                "Astro",
+                "CSS",
+                "TailwindCSS",
+            ]}
+        />
+        <Technologies
+            name="Backend"
+            technologies={[
+                "Java",
+                "Spring",
+                "Go",
+                "SQL",
+                "PostgreSQL",
+                "Oracle",
+            ]}
+        />
+        <Technologies
+            name="Eszközök"
+            technologies={["Git", "Docker", "Docker Compose", "Linux"]}
+        />
     </div>
 </Layout>

@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import type { Theme } from "@utils/types";
-import { getStoredTheme, setStoredTheme } from "@utils/theme";
+import { getStoredTheme, setStoredTheme, type Theme } from "@utils/theme.ts";
 import { AnimatedUnderline } from "./AnimatedUnderline.tsx";
 import type { Language } from "@utils/i18n.ts";
 import { useTranslations } from "@utils/i18n.ts";

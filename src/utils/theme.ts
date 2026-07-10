@@ -1,4 +1,4 @@
-import type { Theme } from "./types";
+export type Theme = "light" | "dark" | "system";
 
 export function getStoredTheme(): Theme {
   if (!("theme" in localStorage)) {

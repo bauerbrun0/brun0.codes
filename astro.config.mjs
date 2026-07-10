@@ -12,6 +12,11 @@ export default defineConfig({
 
   integrations: [react()],
 
+  i18n: {
+    locales: ["en", "hu"],
+    defaultLocale: "en",
+  },
+
   fonts: [
     {
       provider: fontProviders.local(),
@@ -19,9 +24,9 @@ export default defineConfig({
       cssVariable: "--font-inter",
       options: {
         variants: [{
-          src: ['./src/assets/fonts/Inter-Variable.ttf'],
+          src: ['./src/assets/fonts/InterVariable.woff2'],
           weight: '100 900',
-          style: 'normal'
+          style: 'normal',
         }]
       }
     },
@@ -31,9 +36,9 @@ export default defineConfig({
       cssVariable: "--font-inter",
       options: {
         variants: [{
-          src: ['./src/assets/fonts/Inter-Italic-Variable.ttf'],
+          src: ['./src/assets/fonts/InterVariable-Italic.woff2'],
           weight: '100 900',
-          style: 'italic'
+          style: 'italic',
         }]
       }
     },

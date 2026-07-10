@@ -1,15 +1,14 @@
-import { languages } from "@i18n/ui.ts";
+import { languages, type Language } from "@i18n/ui.ts";
 import { AnimatedUnderline } from "./AnimatedUnderline.tsx";
-import { getLangFromUrl, useTranslatedPath } from '@i18n/utils.ts';
+import { getRelativeLocaleUrl } from "astro:i18n";
 
-export function LanguageToggle({ url }: { url: URL}) {
-  const lang = getLangFromUrl(url);
+
+export function LanguageToggle({ lang } : { lang: Language }) {
   const currentLanguageIndex = Object.keys(languages).indexOf(lang);
   const nextLang = Object.keys(languages)[(currentLanguageIndex + 1) % Object.keys(languages).length];
-  const translatePath = useTranslatedPath(nextLang as keyof typeof languages);
 
   return (
-    <a href={translatePath("/")} className="group">
+    <a href={getRelativeLocaleUrl(nextLang, "/")} className="group">
       <AnimatedUnderline>{lang}</AnimatedUnderline>
     </a>
   );

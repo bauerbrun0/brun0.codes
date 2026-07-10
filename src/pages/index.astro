@@ -1,7 +1,8 @@
 ---
 import Layout from "@layouts/Layout.astro";
+import { HeroProfile } from "@components/HeroProfile.tsx";
 ---
 
 <Layout title="brun0.codes">
-    <h1>hello world</h1>
+    <HeroProfile client:load lang={Astro.currentLocale} />
 </Layout>

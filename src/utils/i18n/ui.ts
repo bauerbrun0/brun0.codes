@@ -5,6 +5,8 @@ export const languages = {
   hu: "Magyar",
 };
 
+export type Language = keyof typeof languages;
+
 export const ui = {
   en: {
     "title.home": "brun0.codes",
@@ -13,6 +15,9 @@ export const ui = {
     "header.system": "system",
     "header.home": "home",
     "header.resume": "resume",
+    "hero.name": "Brúnó Bauer",
+    "hero.picture-alt": "A picture of me.",
+    "hero.job": "Full Stack Developer",
   },
   hu: {
     "title.home": "brun0.codes",
@@ -21,5 +26,8 @@ export const ui = {
     "header.system": "rendszer",
     "header.home": "kezdőlap",
     "header.resume": "önéletrajz",
+    "hero.name": "Bauer Brúnó",
+    "hero.picture-alt": "Egy kép rólam.",
+    "hero.job": "Full Stack fejlesztő",
   },
 } as const;

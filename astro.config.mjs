@@ -24,9 +24,9 @@ export default defineConfig({
       cssVariable: "--font-inter",
       options: {
         variants: [{
-          src: ['./src/assets/fonts/InterVariable.woff2'],
-          weight: '100 900',
-          style: 'normal',
+          src: ["./src/assets/fonts/InterVariable.woff2"],
+          weight: "100 900",
+          style: "normal",
         }]
       }
     },
@@ -36,9 +36,9 @@ export default defineConfig({
       cssVariable: "--font-inter",
       options: {
         variants: [{
-          src: ['./src/assets/fonts/InterVariable-Italic.woff2'],
-          weight: '100 900',
-          style: 'italic',
+          src: ["./src/assets/fonts/InterVariable-Italic.woff2"],
+          weight: "100 900",
+          style: "italic",
         }]
       }
     },
@@ -48,9 +48,9 @@ export default defineConfig({
       cssVariable: "--font-fira-code",
       options: {
         variants: [{
-          src: ['./src/assets/fonts/FiraCode-Variable.ttf'],
-          weight: '300 700',
-          style: 'normal'
+          src: ["./src/assets/fonts/FiraCode-Variable.ttf"],
+          weight: "300 700",
+          style: "normal",
         }]
       }
     },

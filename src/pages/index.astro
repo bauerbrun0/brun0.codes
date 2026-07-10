@@ -1,8 +1,32 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import { HeroProfile } from "@components/HeroProfile.tsx";
+import Link from "@components/Link.astro";
 ---
 
 <Layout title="brun0.codes">
     <HeroProfile client:load lang={Astro.currentLocale} />
+    <div class="prose-sm md:prose-base text-gray-800 dark:text-gray-200 mt-10">
+        <p>
+            Based in <Link
+                href="https://www.google.com/maps/place/P%C3%A9cs/"
+                target="_blank">Pécs, Hungary</Link
+            >. Recently completed a Bachelor's degree in Computer Science
+            Engineering at the University of Pécs. Currently seeking a junior
+            developer position.
+        </p>
+    </div>
+    <div class="mt-8 prose-sm md:prose-base text-gray-800 dark:text-gray-200">
+        <h1 class="text-sm md:text-base font-medium">Connect</h1>
+        <p>
+            Find me on <Link
+                href="https://github.com/bauerbrun0"
+                target="_blank">GitHub</Link
+            >. Reach out at <Link
+                href="mailto:bauerbruno@protonmail.com"
+                target="_blank">bauerbruno@protonmail.com</Link
+            >. Or download my <Link href="/resume" target="_blank">resume</Link
+            >.
+        </p>
+    </div>
 </Layout>

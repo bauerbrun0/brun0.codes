@@ -1,0 +1,11 @@
+---
+const { href, target = "_self" } = Astro.props;
+---
+
+<a
+    class="font-medium underline text-gray-800 dark:text-gray-200 dark:hover:text-gray-400 hover:text-gray-600"
+    href={href}
+    target={target}
+>
+    <slot />
+</a>

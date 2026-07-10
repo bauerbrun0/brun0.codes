@@ -1,4 +1,4 @@
-import { languages, type Language } from "@i18n/ui.ts";
+import { languages, type Language } from "@utils/i18n.ts";
 import { AnimatedUnderline } from "./AnimatedUnderline.tsx";
 import { getRelativeLocaleUrl } from "astro:i18n";
 

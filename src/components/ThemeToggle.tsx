@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import type { Theme } from "@utils/types";
 import { getStoredTheme, setStoredTheme } from "@utils/theme";
 import { AnimatedUnderline } from "./AnimatedUnderline.tsx";
-import type { Language } from "@utils/i18n/ui.ts";
-import { useTranslations } from "@utils/i18n/utils.ts";
+import type { Language } from "@utils/i18n.ts";
+import { useTranslations } from "@utils/i18n.ts";
 
 export function ThemeToggle({ lang }: { lang: Language }) {
   const [theme, setTheme] = useState<Theme>("system");

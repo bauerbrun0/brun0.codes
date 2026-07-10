@@ -31,3 +31,9 @@ export const ui = {
     "hero.job": "Full Stack fejlesztő",
   },
 } as const;
+
+export function useTranslations(lang: keyof typeof ui) {
+  return function t(key: keyof typeof ui[typeof defaultLang]) {
+    return ui[lang][key] || ui[defaultLang][key];
+  }
+}

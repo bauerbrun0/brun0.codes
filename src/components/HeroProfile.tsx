@@ -1,8 +1,8 @@
 import { ProfilePicture } from "./ProfilePicture.tsx";
 import { AnimatedTerminal, type TerminalIconHandle } from "@assets/icons/AnimatedTerminal.tsx";
-import type { Language } from "@utils/i18n/ui.ts";
+import type { Language } from "@utils/i18n.ts";
 import { useRef } from "react";
-import { useTranslations } from "@utils/i18n/utils.ts";
+import { useTranslations } from "@utils/i18n.ts";
 
 
 export function HeroProfile({ lang }: { lang: Language }) {

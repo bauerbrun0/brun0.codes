@@ -29,7 +29,12 @@ const t = useTranslations(lang);
             </li>
 
             <li>
-                <a href="/resume" class="group">
+                <a
+                    href="/resume.pdf"
+                    target="_blank"
+                    download="Bauer_Bruno_resume.pdf"
+                    class="group"
+                >
                     <AnimatedUnderline client:load>
                         <div class="flex gap-1 items-center">
                             <span>{t("header.resume")}</span>

@@ -32,18 +32,6 @@ export default defineConfig({
     },
     {
       provider: fontProviders.local(),
-      name: "Inter",
-      cssVariable: "--font-inter",
-      options: {
-        variants: [{
-          src: ["./src/assets/fonts/InterVariable-Italic.woff2"],
-          weight: "100 900",
-          style: "italic",
-        }]
-      }
-    },
-    {
-      provider: fontProviders.local(),
       name: "Fira Code",
       cssVariable: "--font-fira-code",
       options: {

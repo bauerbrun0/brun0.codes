@@ -1,10 +1,16 @@
 // @ts-check
 import { defineConfig, fontProviders } from "astro/config";
+import node from "@astrojs/node";
 import tailwindcss from "@tailwindcss/vite";
 import react from "@astrojs/react";
 
+
 export default defineConfig({
   site: "https://brun0.codes",
+
+  adapter: node({
+    mode: "standalone"
+  }),
 
   vite: {
     plugins: [tailwindcss()]

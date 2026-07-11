@@ -1,10 +1,16 @@
 ---
+import { Font } from "astro:assets";
+import heroImage from "@assets/images/profile-picture.webp";
+
 const { title } = Astro.props;
 ---
 
 <meta charset="utf-8" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="icon" href="/favicon.ico" />
+<Font cssVariable="--font-inter" preload />
+<Font cssVariable="--font-fira-code" />
+<link rel="preload" as="image" href={heroImage.src} />
 <meta name="viewport" content="width=device-width" />
 <meta name="generator" content={Astro.generator} />
 <title>{title}</title>

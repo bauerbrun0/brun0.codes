@@ -6,6 +6,7 @@ import Technologies from "@components/Technologies.astro";
 import ArrowUpRight from "@assets/icons/ArrowUpRight.astro";
 import Project from "@components/Project.astro";
 import Job from "@components/Job.astro";
+import { EmailLink } from "@components/EmailLink.tsx";
 ---
 
 <Layout title="brun0.codes">
@@ -91,12 +92,8 @@ import Job from "@components/Job.astro";
             GitHub-profilomat <Link
                 href="https://github.com/bauerbrun0"
                 target="_blank">itt találod</Link
-            >. Az e-mail címem: <Link
-                href="mailto:bauerbruno@protonmail.com"
-                target="_blank">bauerbruno@protonmail.com</Link
-            >. Az önéletrajzomat pedig <Link href="/resume" target="_blank"
-                >itt töltheted le</Link
-            >.
+            >. Az e-mail címem: <EmailLink client:only />. Az önéletrajzomat
+            pedig <Link href="/resume" target="_blank">itt töltheted le</Link>.
         </p>
     </div>
 </Layout>

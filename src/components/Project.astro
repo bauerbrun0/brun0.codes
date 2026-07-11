@@ -1,0 +1,27 @@
+---
+import ArrowUpRight from "@assets/icons/ArrowUpRight.astro";
+import GitHub from "@assets/icons/GitHub.astro";
+import Link from "@components/Link.astro";
+
+const { title, description, link, type } = Astro.props;
+---
+
+<div>
+    <Link href={link} target="_blank">
+        <div class="flex items-center gap-1.5 w-fit">
+            <span>{title}</span>
+            {
+                type === "github" ? (
+                    <GitHub classes="w-4 h-4" />
+                ) : (
+                    <ArrowUpRight classes="w-4 h-4" />
+                )
+            }
+        </div>
+    </Link>
+    <p
+        class="text-sm md:text-base md:mt-2 mt-2 mb-0! text-gray-600 dark:text-gray-400"
+    >
+        {description}
+    </p>
+</div>

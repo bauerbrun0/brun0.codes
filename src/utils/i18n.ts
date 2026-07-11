@@ -17,7 +17,7 @@ export const ui = {
     "header.resume": "resume",
     "hero.name": "Brúnó Bauer",
     "hero.picture-alt": "A picture of me.",
-    "hero.job": "Full Stack Developer",
+    "hero.job": "Full-stack developer",
   },
   hu: {
     "title.home": "brun0.codes",
@@ -28,7 +28,7 @@ export const ui = {
     "header.resume": "önéletrajz",
     "hero.name": "Bauer Brúnó",
     "hero.picture-alt": "Egy kép rólam.",
-    "hero.job": "Full Stack fejlesztő",
+    "hero.job": "Full-stack fejlesztő",
   },
 } as const;
 

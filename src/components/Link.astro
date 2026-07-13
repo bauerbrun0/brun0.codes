@@ -1,11 +1,24 @@
 ---
-const { href, target = "_self" } = Astro.props;
+interface Props {
+	href: string;
+	target?: string;
+	download?: boolean;
+	downloadFilename?: string;
+}
+
+const {
+	href,
+	target = "_self",
+	download = false,
+	downloadFilename,
+}: Props = Astro.props;
 ---
 
 <a
     class="w-fit font-medium underline text-gray-800 dark:text-gray-200 dark:hover:text-gray-400 hover:text-gray-600"
     href={href}
     target={target}
+    download={download ? downloadFilename ? downloadFilename : true : false}
 >
     <slot />
 </a>

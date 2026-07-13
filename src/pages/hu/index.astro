@@ -6,10 +6,11 @@ import Link from "@components/Link.astro";
 import Project from "@components/Project.astro";
 import Technologies from "@components/Technologies.astro";
 import Layout from "@layouts/Layout.astro";
+import type { Language } from "@utils/i18n";
 ---
 
 <Layout title="brun0.codes">
-    <HeroProfile client:load lang={Astro.currentLocale} />
+    <HeroProfile client:load lang={Astro.currentLocale as Language} />
     <div class="prose-sm md:prose-base text-gray-800 dark:text-gray-200 mt-10">
         <p>
             Pécsi székhelyű mérnökinformatikus vagyok, nemrég végeztem el a
@@ -97,7 +98,8 @@ import Layout from "@layouts/Layout.astro";
             pedig <Link
                 href="/resume.pdf"
                 target="_blank"
-                download="Bauer_Bruno_resume.pdf">itt töltheted le</Link
+                download
+                downloadFilename="Bauer_Bruno_resume.pdf">itt töltheted le</Link
             >.
         </p>
     </div>

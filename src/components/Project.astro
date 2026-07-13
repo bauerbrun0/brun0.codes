@@ -3,7 +3,14 @@ import ArrowUpRight from "@assets/icons/ArrowUpRight.astro";
 import GitHub from "@assets/icons/GitHub.astro";
 import Link from "@components/Link.astro";
 
-const { title, description, link, type } = Astro.props;
+interface Props {
+	title: string;
+	description: string;
+	link: string;
+	type: "github" | "live";
+}
+
+const { title, description, link, type }: Props = Astro.props;
 ---
 
 <div>

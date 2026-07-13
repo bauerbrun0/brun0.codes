@@ -2,9 +2,9 @@
 import { getRelativeLocaleUrl } from "astro:i18n";
 import Link from "@components/Link.astro";
 import Layout from "@layouts/Layout.astro";
-import { useTranslations } from "@utils/i18n.ts";
+import { type Language, useTranslations } from "@utils/i18n.ts";
 
-const lang = Astro.currentLocale;
+const lang = Astro.currentLocale as Language;
 const t = useTranslations(lang);
 ---
 

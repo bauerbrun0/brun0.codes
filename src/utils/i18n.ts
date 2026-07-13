@@ -1,11 +1,6 @@
+export type Language = "en" | "hu";
+
 export const defaultLang = "en";
-
-export const languages = {
-	en: "English",
-	hu: "Magyar",
-};
-
-export type Language = keyof typeof languages;
 
 export const ui = {
 	en: {
@@ -42,4 +37,8 @@ export function useTranslations(lang: keyof typeof ui) {
 	return function t(key: keyof (typeof ui)[typeof defaultLang]) {
 		return ui[lang][key] || ui[defaultLang][key];
 	};
+}
+
+export function getAvailableLanguages() {
+	return Object.keys(ui) as Language[];
 }

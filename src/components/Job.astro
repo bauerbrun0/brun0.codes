@@ -1,5 +1,13 @@
 ---
-const { title, company, date, description, url } = Astro.props;
+interface Props {
+	title: string;
+	company: string;
+	date: string;
+	description: string;
+	url: string;
+}
+
+const { title, company, date, description, url }: Props = Astro.props;
 ---
 
 <a

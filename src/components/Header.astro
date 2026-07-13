@@ -1,18 +1,18 @@
 ---
 import { getRelativeLocaleUrl } from "astro:i18n";
 import ArrowDownRight from "@assets/icons/ArrowDownRight.astro";
-import { useTranslations } from "@utils/i18n.ts";
+import { type Language, useTranslations } from "@utils/i18n.ts";
 import { AnimatedUnderline } from "./AnimatedUnderline.tsx";
 import { LanguageToggle } from "./LanguageToggle.tsx";
 import { ThemeToggle } from "./ThemeToggle.tsx";
 
-const lang = Astro.currentLocale;
+const lang = Astro.currentLocale as Language;
 const t = useTranslations(lang);
 ---
 
 <header class="w-full flex gap-3 md:gap-4 justify-end text-sm sm:text-base">
     <!-- these and AnimatedUnderline should be Astro components, I just wanted to try React in Astro. -->
-    <LanguageToggle client:load url={Astro.url} lang={lang} />
+    <LanguageToggle client:load lang={lang} />
     <ThemeToggle client:load lang={lang} />
     <div
         class="inline-block h-auto w-px self-stretch bg-neutral-300 dark:bg-neutral-600 my-1.5"

@@ -1,5 +1,9 @@
 ---
-const { classes } = Astro.props;
+interface Props {
+	classes?: string;
+}
+
+const { classes }: Props = Astro.props;
 ---
 
 <svg

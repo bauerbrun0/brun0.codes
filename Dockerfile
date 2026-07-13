@@ -2,10 +2,12 @@ FROM node:25-alpine AS base
 WORKDIR /app
 
 FROM base AS pnpm
+ENV HUSKY=0
 RUN npm install -g pnpm
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 
 FROM pnpm AS prod-deps
+COPY ./.husky/install.mjs ./.husky/install.mjs
 RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --prod --frozen-lockfile
 
 FROM pnpm AS build

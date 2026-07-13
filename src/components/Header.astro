@@ -1,10 +1,10 @@
 ---
-import { ThemeToggle } from "./ThemeToggle.tsx";
-import { AnimatedUnderline } from "./AnimatedUnderline.tsx";
-import ArrowDownRight from "@assets/icons/ArrowDownRight.astro";
-import { LanguageToggle } from "./LanguageToggle.tsx";
-import { useTranslations } from "@utils/i18n.ts";
 import { getRelativeLocaleUrl } from "astro:i18n";
+import ArrowDownRight from "@assets/icons/ArrowDownRight.astro";
+import { useTranslations } from "@utils/i18n.ts";
+import { AnimatedUnderline } from "./AnimatedUnderline.tsx";
+import { LanguageToggle } from "./LanguageToggle.tsx";
+import { ThemeToggle } from "./ThemeToggle.tsx";
 
 const lang = Astro.currentLocale;
 const t = useTranslations(lang);
